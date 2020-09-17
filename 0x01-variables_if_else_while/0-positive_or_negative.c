@@ -17,7 +17,7 @@ printf("%i is negative \n", n);
 }
 else
 {
-printf("0 is zero \n", n);
+printf("0 is zero \n");
 }
 return (0);
 }
