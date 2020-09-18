@@ -12,8 +12,9 @@ int e = '\n';
 for (i = '0'; i <= '9'; i++)
 {
 putchar(i);
-if (i < '9' )
+if (i <= '8' )
 putchar(',');
+if (i <= '8')
 putchar(' ');
 }
 putchar(e);
