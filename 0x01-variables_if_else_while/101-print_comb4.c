@@ -1,4 +1,3 @@
-#include <stdlib.h>
 #include <stdio.h>
 
 /**
@@ -19,7 +18,7 @@ for (k = j + 1; k <= '9'; k++)
 putchar(i);
 putchar(j);
 putchar(k);
-if (k < '9' || j < '8')
+if (k < '9' || j < '8' || i < '7')
 {
 putchar(',');
 putchar(' ');
