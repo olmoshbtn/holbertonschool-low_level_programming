@@ -12,7 +12,7 @@ int print_last_digit(int r)
 	lastD = r % 10;
 	if (lastD < 0)
 	{
-		return (lastD * (-1));
+		lastD = lastD * -1; /*otra opción lastD *= -1   */
 	}
 	return (lastD);
 }
