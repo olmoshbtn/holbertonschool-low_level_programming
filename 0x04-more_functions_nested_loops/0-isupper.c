@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * int _isupper - Entry point
+ * _isupper - Entry point
  * @c: no_olvidar
  * Return: void
  */
