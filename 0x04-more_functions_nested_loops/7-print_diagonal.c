@@ -1,12 +1,12 @@
 #include "holberton.h"
 
 /**
- * print_line - check the code for Holberton School students.
+ * print_diagonal - check the code for Holberton School students.
  * @n:  number of times the character _ should be printed.
  * Return: Void.
  */
 
-void print_line(int n)
+void print_diagonal(int n)
 {
 	if (n <= 0)
 	{
@@ -14,9 +14,10 @@ void print_line(int n)
 	}
 	else
 	{
-		for (; n >= 0; n--)
+		_putchar(92);
+		for (; n >= 1; n--)
 		{
-			_putchar('_');
+			_putchar(' ');
 		}
 	}
 	_putchar('\n');
