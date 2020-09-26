@@ -14,6 +14,11 @@ void print_triangle(int size)
 	int col;
 	int count = size;
 
+	if (size <= 0)
+	{
+		_putchar('\n');
+	}
+
 	for (fil = 1; fil <= size; ++fil)
 	{
 		for (col = 1; col <= size; col++)
