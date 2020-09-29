@@ -17,7 +17,7 @@ void print_rev(char *s)
 	}
 	while (s >= psz)
 	{
-		_putchar(*(s - 1));
+		_putchar(*s);
 		s--;
 	}
 	_putchar('\n');
