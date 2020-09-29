@@ -9,8 +9,21 @@
 
 void rev_string(char *s)
 {
-	if (str)
+	char *psz = s;
+	int swp;
+
+	while (*s != '\0')
 	{
-char *end = str + 
+		s++;
+	}
+
+	s--;
+
+	while (s > psz)
+	{
+		swp = *s;
+		*s = *psz;
+		*psz = swp;
+		s--;
 	}
 }
