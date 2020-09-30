@@ -25,5 +25,6 @@ void rev_string(char *s)
 		*s = *psz;
 		*psz = swp;
 		s--;
+		psz++;
 	}
 }
