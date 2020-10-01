@@ -12,8 +12,9 @@ char *_strncat(char *dest, char *src, int n)
 {
 	int src_len;
 	int i;
-	char *end = dest;
+	char *end;
 
+	end = dest;
 	src_len = 0;
        	while (*end)
 	{
