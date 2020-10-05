@@ -1,14 +1,14 @@
 #include "holberton.h"
 
 /**
- * _strspn - function that gets the length of a prefix substring.
+ *_strpbrk - function locates the first occurrence in the string s
  * @s: pointer
  * @accept: pointer
  *
  * Return:  number of bytes in the initial segment of s
  */
 
-unsigned int _strspn(char *s, char *accept)
+char *_strpbrk(char *s, char *accept)
 {
 	int i, j;
 
