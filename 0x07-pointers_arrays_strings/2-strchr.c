@@ -5,12 +5,12 @@
  * @s: pointer
  * @c: char
  *
- * Return: a pointer to the first occurrence of the character c in the string s\, or NULL if the character is not found
+ * Return: a pointer to the first occurrence of the character c
  */
 
 char *_strchr(char *s, char c)
 {
-	while (c != *s && *s != 0)
+	while (c != *s && *s != '\0')
 	{
 		s++;
 	}
