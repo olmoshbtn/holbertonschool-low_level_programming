@@ -10,16 +10,16 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-	char *ptrh;
-	char *ptrn;
+	char *pk;
+	char *pn;
 
 	for ( ; *haystack != '\0'; haystack++)
 	{
-		ptrh = haystack;/*reseteo el puntero para nueva evaluación */
-		ptrn = needle;
-		for ( ; *ptrh == *ptrn; ptrh++, ptrn++)
+		pk = haystack;
+		pn = needle;
+		for ( ; *pk == *pn; pk++, pn++)
 		{
-			if (*ptrh == '\0' || *ptrn == '\0')
+			if (*pn == '\0')
 			{
 				return (haystack);
 			}
