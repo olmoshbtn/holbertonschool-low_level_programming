@@ -1,5 +1,5 @@
-#include <stdio.h>
 #include "holberton.h"
+#include <stdio.h>
 
 /**
  * print_diagsums - function prints sum of the two diagonals (square matrix int)
