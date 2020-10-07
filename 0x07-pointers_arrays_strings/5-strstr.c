@@ -22,12 +22,14 @@ char *_strstr(char *haystack, char *needle)
 		pk = haystack;
 		pn = needle;
 
-		for ( ; *pk == *pn; pk++, pn++)
+		while (*pk == *pn)
 		{
 			if (*pn == '\0')
 			{
 				return (haystack);
 			}
+			pk++;
+			pn++;
 		}
 		haystack++;
 	}
