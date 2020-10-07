@@ -16,12 +16,12 @@ void print_diagsums(int *a, int size)
 	int sumd1 = 0;
 	int sumd2 = 0;
 
-	for (row = 0, loc = a; row < size; ++row, loc += size + 1)
+	for (loc = 0, row = 0; row < size; ++row, loc += size + 1)
 	{
 		sumd1 += *loc;
 	}
 
-	for (row = 0, loc = a + size - 1; row < size; ++row, loc += size - 1)
+	for (loc = a + size - 1, row = 0; row < size; ++row, loc += size - 1)
 	{
 		sumd2 += *loc;
 	}
