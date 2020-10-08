@@ -14,7 +14,7 @@ int function(int n, int i)
 		return (i);
 	if (i * i > n)
 		return (-1);
-	return(function(n, i + 1));
+	return (function(n, i + 1));
 }
 /**
  * _sqrt_recursion - function that returns the natural square root of a number.
