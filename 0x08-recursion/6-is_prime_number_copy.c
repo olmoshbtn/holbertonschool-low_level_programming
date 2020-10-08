@@ -10,9 +10,9 @@
 
 int func(int n, int m)
 {
-	if (n < 2 || m > n)
+	if (n < 2)
 		return (0);
-	if (n % m == 0 && m != n)
+	if (n % m == 0 && n != 0)
 		return (0);
 	if (n == m)
 		return (1);
