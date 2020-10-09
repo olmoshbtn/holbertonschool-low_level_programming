@@ -3,49 +3,55 @@
 /**
  * _strlen_recursion - function that returns the length of a string.
  *
- * @s: pointer
+ * @s: string
  *
- * Return: void.
+ * Return: lentght of the string.
  */
 
 int _strlen_recursion(char *s)
 {
-	if (*s == '\0')
+	if (*s)
 	{
-		return (0);
+		return (1 + _strlen_recursion(s + 1));
 	}
-
-	return (1 + _strlen_recursion(s + 1));
+	return (0);
 }
+
 
 /**
  * func_rec - function that returns the length of a string.
- * @s: pointer
- * @ini: int for count
- * @last: int for count
+ * @s: string.
+ * @len: lenght of the string.
+ * @count: counter steps of the function.
  *
  * Return: function that response call from is_palindrome.
  */
 
-int func_rec(char *s, int ini, int last)
+int func_rec(char *s, int len, int count)
 {
-if (s[ini] != s[last])
-	return (0);
-else if (ini >= last)
-	return (1);
-else
-	return (func_rec(s, ini + 1, last - 1));
+	if (count > len)
+	{
+		return (1);
+	}
+	else if (*(s + count) == *(s + len))
+	{
+		return (func_rec(s, len - 1, count + 1));
+	}
+	else
+	{
+		return (0);
+	}
 }
 /**
  * is_palindrome - function returns if a string is a palindrome or not.
- * @s: pointer
+ * @s: string
  *
  * Return: 1 if a string is a palindrome and 0 if not.
  */
 int is_palindrome(char *s)
 {
-	int ini, last;
+	int len = _strlen_recursion(s) - 1;
+	int count = 0;
 
-	ini = 0;
-	last = _str_recursion(s, ini, last - 1);
+	return (func_rec(s, len, count));
 }
