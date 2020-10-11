@@ -10,11 +10,6 @@
 
 int main(int argc, char *argv[])
 {
-	int counter;
-
-	for (counter = 0; count < argc; counter++);
-	{
-		printf("\nargv[%d]: %s", counter, argv[counter]);
-	}
+	printf("%s\n", argv[argc];
 	return (0);
 }
