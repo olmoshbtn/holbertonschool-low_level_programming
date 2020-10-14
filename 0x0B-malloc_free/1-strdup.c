@@ -17,23 +17,23 @@ char *_strdup(char *str)
 	int i = 0;
 	char *ptr;
 
-	if (str != NULL)
+	if (str == NULL)
 	{
-		len = _str_len(str);
-		ptr = (char *) malloc(len * sizeof(char));
-
-		if (ptr == NULL)
-		{
-			return (NULL);
-		}
-		while (i < len)
-		{
-			ptr[i] = str[i];
-			i++;
-		}
-		return (ptr);
+		return (NULL);
 	}
-	return (NULL);
+	len = _str_len(str);
+	ptr = (char *) malloc(len * sizeof(char));
+
+	if (ptr == NULL)
+	{
+		return (NULL);
+	}
+	while (i < len)
+	{
+		ptr[i] = str[i];
+		i++;
+	}
+	return (ptr);
 }
 
 /**
