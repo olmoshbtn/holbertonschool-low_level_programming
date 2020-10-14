@@ -21,19 +21,22 @@ char *_strdup(char *str)
 	{
 		return (NULL);
 	}
-	len = _str_len(str);
-	ptr = (char *) malloc(len * sizeof(char));
+	else
+	{
+		len = _str_len(str);
+		ptr = (char *) malloc(len * sizeof(char));
 
-	if (ptr == NULL)
-	{
-		return (NULL);
+		if (ptr == NULL)
+		{
+			return (NULL);
+		}
+		while (i < len)
+		{
+			ptr[i] = str[i];
+			i++;
+		}
+		return (ptr);
 	}
-	while (i < len)
-	{
-		ptr[i] = str[i];
-		i++;
-	}
-	return (ptr);
 }
 
 /**
