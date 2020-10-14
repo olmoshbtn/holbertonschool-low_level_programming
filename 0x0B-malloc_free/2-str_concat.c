@@ -25,35 +25,32 @@ char *str_concat(char *s1, char *s2)
 	{
 		s2 = "";
 	}
-	else
+
+	len_s1 = _str_len(s1);
+	len_s2 = _str_len(s2);
+	len_sum = len_s1 + len_s2;
+
+	ptr = (char *) malloc((len_sum + 1) * sizeof(char));
+
+	if (ptr == NULL)
 	{
-
-		len_s1 = _str_len(s1);
-		len_s2 = _str_len(s2);
-		len_sum = len_s1 + len_s2;
-
-		ptr = (char *) malloc((len_sum + 1) * sizeof(char));
-
-		if (ptr == NULL)
-		{
-			return (NULL);
-		}
-
-		i = 0;
-		while (i < len_s1)
-		{
-			ptr[i] = s1[i];
-			i++;
-		}
-
-		j = 0;
-		while (j < (len_s2 + 1))
-		{
-			ptr[i + j] = s2[j];
-			j++;
-		}
-		return (ptr);
+		return (NULL);
 	}
+
+	i = 0;
+	while (i < len_s1)
+	{
+		ptr[i] = s1[i];
+		i++;
+	}
+
+	j = 0;
+	while (j < (len_s2 + 1))
+	{
+		ptr[i + j] = s2[j];
+		j++;
+	}
+	return (ptr);
 }
 
 /**
