@@ -6,7 +6,7 @@
  * @ac: count arguments
  * @av: vector arguments
  *
- * Return: NULL memory allocation fails, 0 if ac or av are NULL,
+ * Return: NULL memory allocation fails, if ac is 0 or av is NULL,
  * otherwise return a pointer to new string
  */
 
