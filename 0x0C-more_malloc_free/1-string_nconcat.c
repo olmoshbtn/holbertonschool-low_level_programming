@@ -15,7 +15,7 @@ unsigned int _str_len(char *str);
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	unsigned int len_s1, len_s2, len_sum;
-	unsigned int count, i;
+	unsigned int count1, count2, i;
 	char *ptr;
 
 	if (s1 == NULL)
@@ -46,15 +46,16 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		return (NULL);
 	}
 
-	while (count < len_s1)
+	while (count1 < len_s1)
 	{
-		ptr[count] = s1[count];
-		count++;
+		ptr[count1] = s1[count1];
+		count1++;
 	}
-	while (count < len_s2)
+
+	while (count2 < len_s2)
 	{
-		ptr[count] = s2[i];
-		count++;
+		ptr[count1 + count2] = s2[i];
+		count2++;
 		i++;
 	}
 	s2[i] = '\0';
