@@ -1,7 +1,7 @@
 #include "holberton.h"
 #include <stdlib.h>
 
-int _str_len(char *str);
+unsigned int _str_len(char *str);
 
 /**
  * string_nconcat - pointer to a newly allocated space in memory
@@ -14,51 +14,51 @@ int _str_len(char *str);
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	int len_s1, len_s2, len_sum;
-	int count, i;
+	unsigned int len_s1, len_s2, len_sum;
+	unsigned int count, i;
 	char *ptr;
 
 	if (s1 == NULL)
 	{
 		s1 = "";
-
-		len_s1 = _str_len(s1);
 	}
 
 	if (s2 == NULL)
 	{
 		s2 = "";
-		len_s2 = _str_len(s2);
 	}
 
-	if (n == NULL)
-		n = "";
+	len_s1 = _str_len(s1);
 
-       	if (n >= len_s2)
+	len_s2 = _str_len(s2);
+
+	if (n > len_s2)
+	{
 		n = len_s2;
+	}
 
 	len_sum = len_s1 + n;
 
-	ptr = (char *) malloc(len_sum + 1) * sizeof(char));
+	ptr = (char *) malloc((len_sum + 1) * sizeof(char));
 
-if (ptr == NULL)
-{
-	return (NULL);
-}
+	if (ptr == NULL)
+	{
+		return (NULL);
+	}
 
-while (count < len_s1)
-{
-	ptr[count] = s1[count];
-	count++;
-}
-while (count < len_s2)
-{
-	ptr[count] = s2[i];
-	count++;
-	i++;
-}
-s2[++i] = '\0';
-return (ptr);
+	while (count < len_s1)
+	{
+		ptr[count] = s1[count];
+		count++;
+	}
+	while (count < len_s2)
+	{
+		ptr[count] = s2[i];
+		count++;
+		i++;
+	}
+	s2[i] = '\0';
+	return (ptr);
 }
 
 /**
@@ -69,10 +69,10 @@ return (ptr);
  * Return: return large of a string
  */
 
-int _str_len(char *str)
+unsigned int _str_len(char *str)
 {
 
-	int len = 0;
+	unsigned int len = 0;
 
 	while (*str)
 	{
