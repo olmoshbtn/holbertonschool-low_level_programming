@@ -10,7 +10,7 @@ char *_strdup(char *str);
  * @age: age of the dog
  * @owner: name of the owner of the dog
  *
- * Retrun: pointer to a new dog, otherwise NULL
+ * Return: pointer to a new dog, otherwise NULL
  */
 
 dog_t *new_dog(char *name, float age, char *owner)
