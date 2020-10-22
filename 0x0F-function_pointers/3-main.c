@@ -12,9 +12,8 @@
 
 int main(int argc, char *argv[])
 {
-	int (*f)(int, int);
 	int num1, num2;
-	int res;
+	char *op;
 
 	if (argc != 4)
 	{
@@ -24,9 +23,9 @@ int main(int argc, char *argv[])
 
 	num1 = atoi(argv[1]);
 	num2 = atoi(argv[3]);
-	f = get_op_func(argv[2]);
+	op = argv[2];
 
-	if (f == NULL)
+	if (get_op_func(op) == NULL || op[1] != '\0')
 	{
 		printf("Error\n");
 		exit(99);
@@ -38,9 +37,7 @@ int main(int argc, char *argv[])
 		exit(100);
 	}
 
-	res = f(num1, num2);
-
-	printf("%d\n", res);
+	printf("%d\n", get_op_func(op)(num1, num2));
 
 	return (0);
 }
