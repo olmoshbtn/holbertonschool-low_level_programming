@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "3-calc.h"
 
 /**
  * get_op_func - function to perform the operation asked by the user
@@ -18,16 +19,15 @@ int (*get_op_func(char *s))(int, int)
 		{NULL, NULL}
 	};
 
-	int i;
+	int i = 0;
 
-	int = 0;
-
-	while (ops[i].op != NULL)
+	while (ops[i].f != NULL)
 	{
-		if (strcmp(ops[i].op, s) == 0)
+		if (*s == *(ops[i].op) && s[1] == '\0')
 		{
 			return (ops[i].f);
 		}
-
+		i++;
 	}
+	return (NULL);
 }
