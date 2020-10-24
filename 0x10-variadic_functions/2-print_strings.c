@@ -3,12 +3,14 @@
 #include <stdarg.h>
 
 /**
- * pritn_numbers -
- * @separator: pointer to a string to be printed between numbers
- * @n: number of parameters
- * @...: unamed parameters
+ * print_strings - print string
+ * @separator: pointer to a string to be printed between strings
+ * @n: number of parameters to print
+ * @...: strings parameters to print
  *
- * Return: 0 if n == 0, otherwise the sum of all parameters.
+ * Description: function print strings, separated by a separator, followed by
+ * a new line. If separator is NULL, it's treated as empty string; if string is
+ * NULL, print "(nil)" instead.
  */
 
 void print_strings(const char *separator, const unsigned int n, ...)
