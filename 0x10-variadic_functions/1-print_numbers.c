@@ -3,7 +3,7 @@
 #include <stdarg.h>
 
 /**
- * pritn_numbers - print numbers
+ * print_numbers - print numbers
  * @separator: pointer to a string to be printed between numbers
  * @n: number of parameters to print
  * @...: the numbers to print
@@ -17,12 +17,6 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	va_list arguments;
 	unsigned int remaining = n;
 
-	if (n == 0)
-	{
-		printf("\n");
-		return;
-	}
-
 	va_start(arguments, n);
 	if (!separator)
 		separator = "";
@@ -31,9 +25,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	{
 		printf("%d", va_arg(arguments, int));
 		if (remaining)
-		{
 			printf("%s", separator);
-		}
 	}
 	printf("\n");
 	va_end(arguments);
