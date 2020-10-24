@@ -11,20 +11,22 @@
  * Description: Function prints numbers, separated by separator. followed by a
  * new line. If separator is NULL, it's treated as the empty string.
  */
+
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
-	unsigned int i;
-	va_list ap;
+	va_list arguments;
+	unsigned int remaining = n;
 
-	va_start(ap, n);
-	for (i = 0; i < n; i++)
+	va_start(arguments, n);
+
+	while (remaining--)
 	{
-		printf("%d", va_arg(ap, int));
-		if (i < (n - 1) && separator)
+		printf("%d", va_arg(arguments, int));
+		if (remaining)
 		{
 			printf("%s", separator);
 		}
 	}
 	printf("\n");
-	va_end(ap);
+	va_end(arguments);
 }
