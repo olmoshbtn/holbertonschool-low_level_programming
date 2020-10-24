@@ -16,10 +16,10 @@ int sum_them_all(const unsigned int n, ...)
 	unsigned int sum = 0, remaining = n;
 
 	va_start(arguments, n);
+
 	while (remaining--)
-		{
-			sum += va_arg(arguments, unsigned int);
-		}
+		sum += va_arg(arguments, unsigned int);
+
 	va_end(arguments);
 
 	return (sum);
