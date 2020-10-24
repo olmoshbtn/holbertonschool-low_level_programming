@@ -17,10 +17,11 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	unsigned int remaining = n;
 
 	va_start(arguments, n);
-	for ( ; remaining; remaining--)
+
+	while (remaining--)
 	{
 		printf("%d", va_arg(arguments, unsigned int));
-		if (remaining != 1)
+		if (remaining)
 		{
 			printf("%s", separator);
 		}
