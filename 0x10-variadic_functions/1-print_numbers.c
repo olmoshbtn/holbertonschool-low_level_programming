@@ -18,7 +18,8 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	unsigned int remaining = n;
 
 	va_start(arguments, n);
-
+	if (!separator)
+		separator = "";
 	while (remaining--)
 	{
 		printf("%d", va_arg(arguments, int));
