@@ -3,12 +3,13 @@
 #include <stdarg.h>
 
 /**
- * pritn_numbers - function that prints numbers, followed by a new line.
+ * pritn_numbers - print numbers
  * @separator: pointer to a string to be printed between numbers
- * @n: number of parameters
- * @...: unamed parameters
+ * @n: number of parameters to print
+ * @...: the numbers to print
  *
- * Return: 0 if n == 0, otherwise the sum of all parameters.
+ * Description: Function prints numbers, separated by separator. followed by a
+ * new line. If separator is NULL, it's treated as the empty string.
  */
 
 void print_numbers(const char *separator, const unsigned int n, ...)
@@ -18,11 +19,14 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 
 	va_start(arguments, n);
 
+	if (separator == NULL)
+		separator = "";
+
 	while (remaining--)
 	{
 		printf("%d", va_arg(arguments, unsigned int));
 
-		if (remaining != 0 && separator != NULL)
+		if (remaining)
 			printf("%s", separator);
 	}
 	printf("\n");
