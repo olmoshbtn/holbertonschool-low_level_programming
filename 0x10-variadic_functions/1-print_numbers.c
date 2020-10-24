@@ -3,7 +3,7 @@
 #include <stdarg.h>
 
 /**
- * pritn_numbers -
+ * pritn_numbers - function that prints numbers, followed by a new line.
  * @separator: pointer to a string to be printed between numbers
  * @n: number of parameters
  * @...: unamed parameters
@@ -31,5 +31,4 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 			va_end(arguments);
 		}
 	}
-	return;
 }
