@@ -24,7 +24,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 
 	while (remaining--)
 	{
-		printf("%d", va_arg(arguments, unsigned int));
+		printf("%i", va_arg(arguments, unsigned int));
 
 		if (remaining != 0 && separator != NULL)
 			printf("%s", separator);
