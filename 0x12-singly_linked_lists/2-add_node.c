@@ -9,8 +9,19 @@
  */
 list_t *add_node(list_t **head, const char *str)
 {
-	list_t *new_nod;
-	new_nod = (struct list_s*) malloc(sizeof(struct list_s));
+	list_t *new_nod = NULL;
+
+	if (!head)
+	{
+		return (NULL);
+	}
+
+	if (!new_nod)
+
+	{
+		return (NULL);
+	}
+	new_nod = (list_t) malloc(sizeof(list_t));
 
 	new_nod->str = strdup(str);
 	new_nod->len = strlen(str);
