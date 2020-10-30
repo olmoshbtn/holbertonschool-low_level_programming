@@ -2,20 +2,22 @@
 
 /**
  * _strlen - calculate the length of a string
- * @str: the string to calculate the length of
+ * @str: pointer to a string to calculate the length of
  *
  * Return: the length of the string
  */
 size_t _strlen(const char *str)
 {
-	const char *pos = str;
+	const char *str_copy = str;
 
 	if (str)
 	{
-		while (*pos)
-			++pos;
+		while (*str_copy)
+		{
+			str_copy++;
+		}
 	}
-	return (pos - str);
+	return (str_copy - str);
 }
 
 /**
@@ -34,7 +36,7 @@ list_t *add_node(list_t **head, const char *str)
 		return (NULL);
 	}
 
-	new_nod = (list_t*) malloc(sizeof(list_t));
+	new_nod = (list_t *) malloc(sizeof(list_t));
 
 	if (!new_nod)
 	{
