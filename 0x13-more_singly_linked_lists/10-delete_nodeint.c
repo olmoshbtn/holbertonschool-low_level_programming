@@ -9,23 +9,22 @@
  */
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
-	listint_t *next;
+	listint_t *aux = (*head)->next;
+	unsigned int count = 0;
 
-	if (!head)
+	if (!head || !aux)
 	{
 		return (-1);
 	}
-	if (index && *head)
+
+	while ((*head)->next != NULL && count < index)
 	{
-		return (delete_nodeint_at_index(&(*head)->next, index - 1));
+		count++;
+		head = &(*head)->next;
 	}
-	if (index || !(*head))
-	{
-		return (-1);
-	}
-	next = (*head)->next;
+	aux = (*head)->next;
 	free(*head);
-	*head = next;
+	*head = aux;
 
 	return (1);
 }
