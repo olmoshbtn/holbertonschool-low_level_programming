@@ -8,9 +8,7 @@
  */
 listint_t *reverse_listint(listint_t **head)
 {
-	listint_t *aux1 = *head;
-	listint_t *aux2 = (*head)->next;
-	(*head)->next = NULL;
+	listint_t *aux1, *aux2;
 
 	if (*head == NULL)
 	{
@@ -19,6 +17,10 @@ listint_t *reverse_listint(listint_t **head)
 
 	if ((*head)->next != NULL)
 	{
+		aux1 = *head;
+		aux2 = (*head)->next;
+		aux1->next = NULL;
+
 		while (aux2->next != NULL)
 		{
 			*head = aux2;
