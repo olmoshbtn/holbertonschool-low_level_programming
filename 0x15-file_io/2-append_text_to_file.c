@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * create_file - function that appends text at the end of a file.
+ * append_text_to_file - function that appends text at the end of a file.
  * @filename: pointer
  * @text_content: pointer
  *
@@ -16,7 +16,7 @@ int append_text_to_file(const char *filename, char *text_content)
 		return (-1);
 
 	if (text_content == NULL)
-       		return (1);
+		return (1);
 
 	fd = open(filename, O_APPEND | O_WRONLY);
 
