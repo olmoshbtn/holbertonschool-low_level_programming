@@ -34,10 +34,10 @@ int main(int argc, char **argv)
 	{
 		rd_f = read(fd_1, buff, 1024);
 		wr_f = write(fd_2, buff, rd_f);
-		if (rd_f == -1)
-			return (-1);
-		if (wr_f == -1)
-			return (-1);
+		if (wr_f != rd_f)
+		{dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+			exit(99);
+		}
 	}
 	cl_1 = close(fd_1);
 	cl_2 = close(fd_2);
