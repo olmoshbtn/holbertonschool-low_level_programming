@@ -32,7 +32,7 @@ int main(int argc, char **argv)
 	}
 	while (rd_f == 1024)
 	{
-		rd_f = read(fd_2, buff, 1024);
+		rd_f = read(fd_1, buff, 1024);
 		wr_f = write(fd_2, buff, rd_f);
 	}
 	cl_1 = close(fd_1);
